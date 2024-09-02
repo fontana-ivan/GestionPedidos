@@ -1,0 +1,8 @@
+{
+  "name": "Gestión de Pedidos",
+  "short_name": "Gestión",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#007bff",
+  "theme_color": "#007bff"
+}

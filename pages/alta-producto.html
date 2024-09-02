@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación PWA para dar de alta productos">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Alta de Productos</title>
+</head>
+<body>
+    <header>
+        <h1>Alta de Productos</h1>
+    </header>
+
+    <main>
+        <form id="form-producto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion">
+            
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <ul id="lista-productos"></ul>
+        <a href="../index.html">Volver a la página principal</a>
+    </main>
+
+    <footer>
+        <p>© 2024 Gestión de Pedidos</p>
+    </footer>
+
+    <script src="../js/producto/producto.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación PWA para dar de alta personas">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Alta de Personas</title>
+</head>
+<body>
+    <header>
+        <h1>Alta de Personas</h1>
+    </header>
+
+    <main>
+        <form id="form-persona">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            
+            <button type="submit">Agregar Persona</button>
+        </form>
+        <ul id="lista-personas"></ul>
+        <a href="../index.html">Volver a la página principal</a>
+    </main>
+
+    <footer>
+        <p>© 2024 Gestión de Pedidos</p>
+    </footer>
+    
+    <script src="../js/persona/persona.js"></script>
+</body>
+</html>

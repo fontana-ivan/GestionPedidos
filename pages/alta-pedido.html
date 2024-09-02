@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación PWA para dar de alta pedidos">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Alta de Pedidos</title>
+</head>
+<body>
+    <header>
+        <h1>Alta de Pedidos</h1>
+    </header>
+
+    <main>
+        <form id="form-pedido">
+            <div class="cabecera-pedido">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+            </div>
+
+            <div class="detalle-pedido">
+                <h3>Detalle del Pedido</h3>
+                
+                <label for="producto">Producto:</label>
+                <input type="text" id="producto" name="producto">
+                
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad">
+                
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio">
+
+                <button type="button" id="agregar-item">Agregar Ítem</button>
+            </div>
+
+            <table id="tabla-items">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <label for="cliente">Cliente:</label>
+            <select id="cliente" name="cliente" required></select>
+            
+            <button type="button" id="agregar-cliente">Agregar Cliente</button>
+            <button type="submit">Guardar Pedido</button>
+        </form>
+
+        <ul id="lista-pedidos"></ul>
+        <a href="index.html">Volver a la página principal</a>
+    </main>
+
+    <!-- Popup de Alta de Clientes -->
+    <div id="popup-alta-cliente" class="popup">
+        <div class="popup-content">
+            <span id="cerrar-popup">&times;</span>
+            <h2>Agregar Cliente</h2>
+            <form id="form-persona-popup">
+                <label for="nombre-popup">Nombre:</label>
+                <input type="text" id="nombre-popup" name="nombre" required>
+                
+                <label for="email-popup">Email:</label>
+                <input type="email" id="email-popup" name="email" required>
+                
+                <label for="telefono-popup">Teléfono:</label>
+                <input type="tel" id="telefono-popup" name="telefono" required>
+                
+                <button type="submit">Agregar Persona</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+      <p>© 2024 Gestión de Pedidos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
